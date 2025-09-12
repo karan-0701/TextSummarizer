@@ -4,6 +4,7 @@ from src.textSummarizer.pipeline.stage_2_data_transformation_pipeline import Dat
 from src.textSummarizer.pipeline.stage_3_model_trainer_pipeline import ModelTrainerTrainingPipeline
 from src.textSummarizer.config.configuration import ConfigurationManager
 
+from src.textSummarizer.pipeline.stage_4_model_evaluation import ModelEvaluationPipeline
 STAGE_NAME="Data Ingestion stage"
 
 try:
@@ -32,6 +33,17 @@ try:
     logger.info(f"stage {STAGE_NAME} initiated")
     model_trainer_pipeline=ModelTrainerTrainingPipeline()
     model_trainer_pipeline.initiate_model_trainer()
+    logger.info(f"{STAGE_NAME} complete.")
+except Exception as e:
+    logger.exception(e)
+    raise e   
+
+STAGE_NAME="Model Evaluation stage"
+
+try:
+    logger.info(f"stage {STAGE_NAME} initiated")
+    model_evaluation_pipeline=ModelEvaluationPipeline()
+    model_evaluation_pipeline.initiate_model_evaluation()
     logger.info(f"{STAGE_NAME} complete.")
 except Exception as e:
     logger.exception(e)
