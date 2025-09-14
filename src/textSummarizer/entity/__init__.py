@@ -28,7 +28,8 @@ class ModelTrainerConfig:
     eval_steps: int
     save_steps: int
     gradient_accumulation_steps: int
-    
+
+@dataclass
 class ModelEvaluationConfig:
     root_dir: Path
     data_path: Path

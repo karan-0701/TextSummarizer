@@ -444,3 +444,77 @@ Traceback (most recent call last):
   File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/src/textSummarizer/config/configuration.py", line 64, in get_model_evaluation_config
     model_evaluation_config = ModelEvaluationConfig(
 TypeError: ModelEvaluationConfig() takes no arguments
+[2025-09-14 13:34:45,336: INFO: server: Started server process [37519]]
+[2025-09-14 13:34:45,337: INFO: on: Waiting for application startup.]
+[2025-09-14 13:34:45,337: INFO: on: Application startup complete.]
+[2025-09-14 13:34:45,337: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-09-14 13:35:09,107: INFO: commons: yaml file: config/config.yaml loaded successfully]
+[2025-09-14 13:35:09,114: INFO: commons: yaml file: params.yaml loaded successfully]
+[2025-09-14 13:35:09,114: INFO: commons: created a directory at: artifacts]
+[2025-09-14 13:35:09,114: INFO: commons: created a directory at: artifacts/model_evaluation]
+[2025-09-14 13:35:09,115: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/venv/lib/python3.10/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/app.py", line 35, in predict_route
+    raise e
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/app.py", line 31, in predict_route
+    obj = PredictionPipeline()
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/src/textSummarizer/pipeline/prediction_pipeline.py", line 8, in __init__
+    self.config = ConfigurationManager().get_model_evaluation_config()
+  File "/Users/karandeepsingh/Desktop/MLOps/TextSummarizer/src/textSummarizer/config/configuration.py", line 64, in get_model_evaluation_config
+    model_evaluation_config = ModelEvaluationConfig(
+TypeError: ModelEvaluationConfig() takes no arguments
+[2025-09-14 13:37:24,162: INFO: server: Shutting down]
+[2025-09-14 13:37:24,266: INFO: on: Waiting for application shutdown.]
+[2025-09-14 13:37:24,267: INFO: on: Application shutdown complete.]
+[2025-09-14 13:37:24,267: INFO: server: Finished server process [37519]]
+[2025-09-14 13:37:30,805: INFO: server: Started server process [37828]]
+[2025-09-14 13:37:30,805: INFO: on: Waiting for application startup.]
+[2025-09-14 13:37:30,805: INFO: on: Application startup complete.]
+[2025-09-14 13:37:30,806: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-09-14 13:37:47,651: INFO: commons: yaml file: config/config.yaml loaded successfully]
+[2025-09-14 13:37:47,654: INFO: commons: yaml file: params.yaml loaded successfully]
+[2025-09-14 13:37:47,654: INFO: commons: created a directory at: artifacts]
+[2025-09-14 13:37:47,654: INFO: commons: created a directory at: artifacts/model_evaluation]
+[2025-09-14 13:39:41,636: INFO: commons: yaml file: config/config.yaml loaded successfully]
+[2025-09-14 13:39:41,643: INFO: commons: yaml file: params.yaml loaded successfully]
+[2025-09-14 13:39:41,644: INFO: commons: created a directory at: artifacts]
+[2025-09-14 13:39:41,645: INFO: commons: created a directory at: artifacts/model_evaluation]
+[2025-09-14 13:41:15,153: INFO: commons: yaml file: config/config.yaml loaded successfully]
+[2025-09-14 13:41:15,165: INFO: commons: yaml file: params.yaml loaded successfully]
+[2025-09-14 13:41:15,168: INFO: commons: created a directory at: artifacts]
+[2025-09-14 13:41:15,170: INFO: commons: created a directory at: artifacts/model_evaluation]
+[2025-09-14 13:42:01,316: INFO: server: Shutting down]
+[2025-09-14 13:42:01,439: INFO: on: Waiting for application shutdown.]
+[2025-09-14 13:42:01,448: INFO: on: Application shutdown complete.]
+[2025-09-14 13:42:01,449: INFO: server: Finished server process [37828]]
